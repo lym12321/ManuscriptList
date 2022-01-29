@@ -37,7 +37,7 @@
         if(!$seq) report(-1, "缺少参数", array());
         if(!is_numeric($seq)) report(-1, "参数不合法", array());
         
-        $url = "https://open.wenjuan.com/openapi/v4/get_rspd_url";
+        $url = "https://open.wenjuan.com/openapi/v4/get_rspd_url/";
         
         $timestamp = time();
         $signature = md5($AppKey.$seq.$formId.$timestamp.$AppSecret);
@@ -50,7 +50,7 @@
     }
     
     if($method == "getList"){
-        $url = "https://open.wenjuan.com/openapi/v4/get_rspd_list";
+        $url = "https://open.wenjuan.com/openapi/v4/get_rspd_list/";
         // Q1 - 匿名/实名
         // Q2 - 真实姓名
         // Q3 - 昵称
